@@ -7,12 +7,10 @@
 export const pick = (obj, ...fields) => {
   const newObject = {};
 
-  fields.forEach((field) => {
-    Object.entries(obj).forEach(([key, value]) => {
-      if (field === key) {
-        newObject[key] = value;
-      }
-    });
+  Object.entries(obj).forEach(([key, value]) => {
+    if (fields.includes(key)) {
+      newObject[key] = value;
+    }
   });
 
   return newObject;
