@@ -6,5 +6,7 @@
 export function uniq(arr) {
   if (arr === undefined || arr.length < 1) return [];
 
-  return new Set([...arr]);
+  const collection = new Set(arr);
+
+  return [...collection];
 }

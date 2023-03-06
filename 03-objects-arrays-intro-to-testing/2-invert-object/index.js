@@ -14,5 +14,5 @@ export function invertObj(obj) {
     return newObj;
   }
 
-  return undefined;
+  return;
 }
